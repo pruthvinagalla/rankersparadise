@@ -1,0 +1,9 @@
+# Rankers' Paradise - robots.txt
+# https://www.robotstxt.org/
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://YOUR_GITHUB_USERNAME.github.io/rankers-paradise/sitemap.xml

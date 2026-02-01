@@ -1,0 +1,10 @@
+# Windows Zone.Identifier files
+*:Zone.Identifier
+
+# Node modules (if used temporarily)
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
