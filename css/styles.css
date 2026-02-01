@@ -328,6 +328,15 @@ body.menu-open .nav__toggle {
   opacity: 0;
   width: 100%;
   max-width: 280px;
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+.hero__cta:hover,
+.hero__cta:focus {
+  background-color: transparent;
+  color: #ff8c00;
+  border-color: #ff8c00;
 }
 
 .hero__scroll-indicator {
@@ -764,10 +773,16 @@ a.contact__value:hover {
   text-align: center;
 }
 
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__logo {
   height: 50px;
   width: auto;
-  margin: 0 auto var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .footer__tagline {
@@ -1157,8 +1172,8 @@ input[type="tel"] {
     text-align: left;
   }
 
-  .footer__logo {
-    margin: 0 0 var(--spacing-sm);
+  .footer__brand {
+    align-items: flex-start;
   }
 
   .footer__link,
