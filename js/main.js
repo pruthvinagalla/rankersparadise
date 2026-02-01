@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setupPopup();
   setupForm();
   observeSections();
+  setupImageCarousels();
 });
 
 /**
@@ -508,4 +509,58 @@ function observeSections() {
       section.classList.add('visible');
     });
   }
+}
+
+/**
+ * Setup image carousels with auto-rotation
+ */
+function setupImageCarousels() {
+  const carousels = document.querySelectorAll('.image-carousel');
+
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.image-carousel__slide');
+    const dots = carousel.querySelectorAll('.image-carousel__dot');
+    let currentIndex = 0;
+    let intervalId;
+    const autoPlayDelay = 4000; // 4 seconds
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    function startAutoPlay() {
+      intervalId = setInterval(nextSlide, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+      clearInterval(intervalId);
+    }
+
+    // Dot click handlers
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopAutoPlay();
+        showSlide(index);
+        startAutoPlay();
+      });
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+
+    // Start auto-rotation
+    startAutoPlay();
+  });
 }
