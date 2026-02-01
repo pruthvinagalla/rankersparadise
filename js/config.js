@@ -66,7 +66,7 @@ const CONFIG = {
 
   // SEO Configuration
   seo: {
-    siteUrl: "https://YOUR_GITHUB_USERNAME.github.io/rankers-paradise/",
+    siteUrl: "https://rankersparadisehere.com/",
     siteName: "Rankers' Paradise",
     title: "Rankers' Paradise | Quality Tuitions for Class 5-10 | CBSE & ICSE",
     description: "Join Rankers' Paradise for high-quality, enjoyable tuitions for CBSE and ICSE students from Class 5th to 10th.",

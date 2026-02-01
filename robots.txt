@@ -6,4 +6,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location (update with your actual domain)
-Sitemap: https://YOUR_GITHUB_USERNAME.github.io/rankers-paradise/sitemap.xml
+Sitemap: https://rankersparadisehere.com/sitemap.xml
